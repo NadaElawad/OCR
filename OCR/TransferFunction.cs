@@ -8,22 +8,41 @@ namespace OCR
 {
     class TransferFunction
     {
-        public static double evaluteSigmoid(double value) 
+        public enum Type { Sigmoid, Hyperbolic };
+        public static Type functionType;
+
+        public static double evaluate(double value)
+        {
+            if (functionType == Type.Sigmoid)
+                return evaluteSigmoid(value);
+            else
+                return evaluteHyperbolic(value);
+        }
+
+        public static double evaluateDerivative(double value)
+        {
+            if (functionType == Type.Sigmoid)
+                return evaluteDerivateSigmoid(value);
+            else
+                return evaluteDerivateHyperbolic(value);
+        }
+
+        private static double evaluteSigmoid(double value) 
 	    {
 		    return 1 / (1 + Math.Pow(Math.E, - value));
 	    }
 
-	    public static double evaluteDerivateSigmoid(double value) 
+	    private static double evaluteDerivateSigmoid(double value) 
 	    {
 		    return (value - Math.Pow(value, 2));
 	    }
 
-        public static double evaluteHyperbolic(double value) 
+        private static double evaluteHyperbolic(double value) 
 	    {
 		    return Math.Tanh(value);
 	    }
 
-        public static double evaluteDerivateHyperbolic(double value) 
+        private static double evaluteDerivateHyperbolic(double value) 
 	    {
 		    return 1 - Math.Pow(value, 2);
 	    }

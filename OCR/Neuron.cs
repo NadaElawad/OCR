@@ -8,21 +8,22 @@ namespace OCR
 {
     class Neuron
     {
-        public double Value;
-        public double[] Weights;
-        public double Bias;
-        public double Delta;
+        public double value;
+        public double[] weights;
+        public double bias;
+        public double errorSignal;
 
         public Neuron(int prevLayerSize)
         {
             Random rand = new Random();
-            Weights = new double[prevLayerSize];
-            Bias = rand.Next() / 10000000000000.0;
-            Delta = rand.Next() / 10000000000000.0;
-            Value = rand.Next() / 10000000000000.0;
+            const double RANGE = 1e13;
+            weights = new double[prevLayerSize];
+            bias = rand.Next() / RANGE;
+            errorSignal = rand.Next() / RANGE;
+            value = rand.Next() / RANGE;
 
-            for (int i = 0; i < Weights.Length; i++)
-                Weights[i] = rand.Next() / 10000000000000.0;
+            for (int i = 0; i < weights.Length; i++)
+                weights[i] = rand.Next() / RANGE;
         }
     }
 }
