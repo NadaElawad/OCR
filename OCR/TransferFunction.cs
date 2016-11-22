@@ -10,11 +10,12 @@ namespace OCR
     {
         public enum Type { Sigmoid, Hyperbolic };
         public static Type functionType;
+        public static double slope = 1;
 
         public static double evaluate(double value)
         {
             if (functionType == Type.Sigmoid)
-                return evaluteSigmoid(value);
+                return evaluteSigmoid(value*slope);
             else
                 return evaluteHyperbolic(value);
         }
@@ -22,7 +23,7 @@ namespace OCR
         public static double evaluateDerivative(double value)
         {
             if (functionType == Type.Sigmoid)
-                return evaluteDerivateSigmoid(value);
+                return evaluteDerivateSigmoid(value*slope);
             else
                 return evaluteDerivateHyperbolic(value);
         }

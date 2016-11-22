@@ -24,14 +24,15 @@ namespace OCR
 
         public double Learn(int num_TrainingPerClass)
         {
-            double meanSquareError = 0;
-            while (meanSquareError < threshold)
+            double meanSquareError = threshold + 1;
+            while (meanSquareError > threshold)
             {
+                meanSquareError = 0;
                 for (int i = 0; i < num_Classes; i++)
                 {
                     for (int j = 1; j <= num_TrainingPerClass; j++)
                     {
-                        String pattern = "img/" + classes[i] + "/" + j + ".txt";
+                        String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
                         HelperFunctions.Normalize(ref input);
@@ -49,7 +50,7 @@ namespace OCR
             }
             return meanSquareError;
         }
-        public int recognize(String imgPath)
+        public int Classify(String imgPath)
         {
             string[] lines = System.IO.File.ReadAllLines(imgPath);
             double[] input = HelperFunctions.ToDoubleArray(lines);

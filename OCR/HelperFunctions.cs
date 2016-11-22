@@ -29,6 +29,8 @@ namespace OCR
                 mean += input[i];
                 absMax = Math.Max(absMax, input[i]);
             }
+            mean /= input.Length;
+
             for (int i = 0; i < input.Length; i++)
             {
                 input[i] = (input[i] - mean) / absMax;
