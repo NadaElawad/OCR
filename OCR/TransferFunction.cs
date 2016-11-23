@@ -35,7 +35,7 @@ namespace OCR
 
 	    private static double evaluteDerivateSigmoid(double value) 
 	    {
-            return (value - Math.Pow(value, 2));
+            return slope * (value - Math.Pow(value, 2));
 	    }
 
         private static double evaluteHyperbolic(double value) 

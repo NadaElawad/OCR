@@ -23,7 +23,7 @@ namespace OCR
             value = 0;
 
             for (int i = 0; i < weights.Length; i++)
-                weights[i] = rand.Next() / RANGE;
+                weights[i] = rand.NextDouble() / RANGE;
         }
     }
 }
