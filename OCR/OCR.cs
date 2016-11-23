@@ -19,6 +19,7 @@ namespace OCR
             imageSz = 30*30;
             this.threshold = threshold;
             this.num_Classes = num_Classes;
+            TransferFunction.functionType = type;
             MLP = new MultiLayerPerceptron(layers, alpha, type);
         }
 
@@ -35,7 +36,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        HelperFunctions.Normalize(ref input);
+                        //HelperFunctions.Normalize(ref input);
 
                         double[] output = new double[num_Classes];
                         for (int k = 0; k < num_Classes; k++)
@@ -46,7 +47,7 @@ namespace OCR
                         meanSquareError += MLP.BackPropagate(input, output);
                     }
                 }
-                meanSquareError /= num_Classes;
+                meanSquareError /= num_TrainingPerClass;
             }
             return meanSquareError;
         }

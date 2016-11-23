@@ -12,17 +12,28 @@ namespace OCR
 {
     public partial class Output : Form
     {
-        public Output()
+        InputForm inForm;
+        public Output(InputForm inForm)
         {
+            this.inForm = inForm;
             InitializeComponent();
+            update();
         }
-
+        void update()
+        {
+            mismatchingSamplesOutLbl.Text = inForm.misMatchingSamples.ToString();
+            accuracyRateOutLbl.Text = (Math.Round(inForm.accuracy*100)+"%").ToString();
+            mseOutLbl.Text = inForm.meanSquareError.ToString();
+        }
         private void imageClassifyButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = imageBrowserDialog.ShowDialog();
-            if(result == DialogResult.OK) //test result
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK)
             {
-                //do something with the file
+                string filePath = openFileDialog1.FileName;
+                string s = "Image Belongs to Class: " + inForm.ClassifyImage(filePath);
+                classifiedPattern.Text = s;
             }
         }
     }

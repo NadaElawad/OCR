@@ -16,7 +16,7 @@ namespace OCR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new inputForm());
+            Application.Run(new InputForm());
         }
     }
 }

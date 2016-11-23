@@ -89,8 +89,7 @@ namespace OCR
                 error = desiredOutput[i] - output[i];
                 meanSquareError += error * error;
             }
-            meanSquareError /= 2*output.Length;
-            return meanSquareError;
+            return meanSquareError / (output.Length);
         }
     }
 }

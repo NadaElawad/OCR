@@ -35,7 +35,7 @@ namespace OCR
 
 	    private static double evaluteDerivateSigmoid(double value) 
 	    {
-		    return (value - Math.Pow(value, 2));
+            return (value - Math.Pow(value, 2));
 	    }
 
         private static double evaluteHyperbolic(double value) 
@@ -45,7 +45,7 @@ namespace OCR
 
         private static double evaluteDerivateHyperbolic(double value) 
 	    {
-		    return 1 - Math.Pow(value, 2);
+		    return 1 - Math.Pow(Math.Tanh(value), 2);
 	    }
     }
 }

@@ -2,7 +2,6 @@ C:\Users\nadaa\Desktop\Projects\OCR\OCR\bin\Debug\OCR.exe.config
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\bin\Debug\OCR.exe
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\bin\Debug\OCR.pdb
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.csprojResolveAssemblyReference.cache
-C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.Form1.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.Properties.Resources.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.csproj.GenerateResource.Cache
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.exe
@@ -17,3 +16,5 @@ C:\Users\Omar\Desktop\OCR\OCR\obj\Debug\OCR.csproj.GenerateResource.Cache
 C:\Users\Omar\Desktop\OCR\OCR\bin\Debug\OCR.exe
 C:\Users\Omar\Desktop\OCR\OCR\bin\Debug\OCR.pdb
 C:\Users\Omar\Desktop\OCR\OCR\obj\Debug\OCR.Output.resources
+C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.inputForm.resources
+C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.Output.resources

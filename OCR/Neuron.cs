@@ -19,8 +19,8 @@ namespace OCR
             const double RANGE = 1e13;
             weights = new double[prevLayerSize];
             bias = rand.Next() / RANGE;
-            errorSignal = rand.Next() / RANGE;
-            value = rand.Next() / RANGE;
+            errorSignal = 0;
+            value = 0;
 
             for (int i = 0; i < weights.Length; i++)
                 weights[i] = rand.Next() / RANGE;
