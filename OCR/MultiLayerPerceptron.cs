@@ -8,11 +8,11 @@ namespace OCR
 {
     class MultiLayerPerceptron
     {
-        public TransferFunction.Type transferFunction;
+        public TransferFunction transferFunction;
         public Layer[] layers;
         public double alpha = 0.1;
 
-        public MultiLayerPerceptron(int[] layers, double alpha, TransferFunction.Type transferFunction)
+        public MultiLayerPerceptron(int[] layers, double alpha, TransferFunction transferFunction)
         {
             this.alpha = alpha;
             this.transferFunction = transferFunction;
@@ -27,7 +27,6 @@ namespace OCR
                     this.layers[i] = new Layer(layers[i], layers[i - 1]);
             }
         }
-
         public double[] ForwardPropagate(double[] input)
         {
             double[] output = new double[layers[layers.Length - 1].length];
@@ -44,7 +43,7 @@ namespace OCR
                     {
                         net += layers[i - 1].neurons[k].value * layers[i].neurons[j].weights[k];
                     }
-                    layers[i].neurons[j].value = TransferFunction.evaluate(net);
+                    layers[i].neurons[j].value = transferFunction.evaluate(net);
                 }
             }
             for (int i = 0; i < layers[layers.Length - 1].length; i++)
@@ -60,7 +59,7 @@ namespace OCR
             for (int i = 0; i < layers[layers.Length - 1].length; i++)
             {
                 error = desiredOutput[i] - output[i];
-                layers[layers.Length - 1].neurons[i].errorSignal = error * TransferFunction.evaluateDerivative(output[i]);
+                layers[layers.Length - 1].neurons[i].errorSignal = error * transferFunction.evaluateDerivative(output[i]);
             }
             for (int i = layers.Length - 2; i >= 0; i--)
             {
@@ -71,7 +70,7 @@ namespace OCR
                     {
                         error += layers[i + 1].neurons[k].errorSignal * layers[i + 1].neurons[k].weights[j];
                     }
-                    layers[i].neurons[j].errorSignal = error * TransferFunction.evaluateDerivative(layers[i].neurons[j].value);
+                    layers[i].neurons[j].errorSignal = error * transferFunction.evaluateDerivative(layers[i].neurons[j].value);
                 }
                 for (int j = 0; j < layers[i + 1].length; j++)
                 {

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace OCR
 {
-    public partial class Output : Form
+    public partial class OutputForm : Form
     {
         InputForm inForm;
-        public Output(InputForm inForm)
+        public OutputForm(InputForm inForm)
         {
             this.inForm = inForm;
             InitializeComponent();

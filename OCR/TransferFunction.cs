@@ -8,19 +8,28 @@ namespace OCR
 {
     class TransferFunction
     {
-        public enum Type { Sigmoid, Hyperbolic };
-        public static Type functionType;
+        public enum Type { Sigmoid, Hyperbolic, Signum, Linear };
+        public Type functionType;
         public static double slope = 1;
 
-        public static double evaluate(double value)
+        public TransferFunction(Type type)
         {
-            if (functionType == Type.Sigmoid)
-                return evaluteSigmoid(value*slope);
-            else
-                return evaluteHyperbolic(value);
+            this.functionType = type;
         }
 
-        public static double evaluateDerivative(double value)
+        public double evaluate(double value)
+        {
+            if (functionType == Type.Sigmoid)
+                return evaluteSigmoid(value * slope);
+            else if (functionType == Type.Hyperbolic)
+                return evaluteHyperbolic(value);
+            else if (functionType == Type.Signum)
+                return evaluateSignum(value);
+            else
+                return evaluateLinear(value);
+        }
+
+        public double evaluateDerivative(double value)
         {
             if (functionType == Type.Sigmoid)
                 return evaluteDerivateSigmoid(value*slope);
@@ -28,22 +37,33 @@ namespace OCR
                 return evaluteDerivateHyperbolic(value);
         }
 
-        private static double evaluteSigmoid(double value) 
+        private double evaluateSignum(double value)
+        {
+            if (value > 0) return 1;
+            return -1;
+        }
+
+        private double evaluateLinear(double value)
+        {
+            return value;
+        }
+
+        private double evaluteSigmoid(double value) 
 	    {
 		    return 1 / (1 + Math.Pow(Math.E, - value));
 	    }
 
-	    private static double evaluteDerivateSigmoid(double value) 
+	    private double evaluteDerivateSigmoid(double value) 
 	    {
             return slope * (value - Math.Pow(value, 2));
 	    }
 
-        private static double evaluteHyperbolic(double value) 
+        private double evaluteHyperbolic(double value) 
 	    {
 		    return Math.Tanh(value);
 	    }
 
-        private static double evaluteDerivateHyperbolic(double value) 
+        private double evaluteDerivateHyperbolic(double value) 
 	    {
 		    return 1 - Math.Pow(Math.Tanh(value), 2);
 	    }

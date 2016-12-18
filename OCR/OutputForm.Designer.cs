@@ -1,6 +1,6 @@
 ﻿namespace OCR
 {
-    partial class Output
+    partial class OutputForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,16 +52,17 @@
             // mismatchingSamplesOutLbl
             // 
             this.mismatchingSamplesOutLbl.AutoSize = true;
-            this.mismatchingSamplesOutLbl.Location = new System.Drawing.Point(260, 44);
+            this.mismatchingSamplesOutLbl.Location = new System.Drawing.Point(323, 44);
             this.mismatchingSamplesOutLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mismatchingSamplesOutLbl.Name = "mismatchingSamplesOutLbl";
-            this.mismatchingSamplesOutLbl.Size = new System.Drawing.Size(0, 25);
+            this.mismatchingSamplesOutLbl.Size = new System.Drawing.Size(65, 25);
             this.mismatchingSamplesOutLbl.TabIndex = 1;
+            this.mismatchingSamplesOutLbl.Text = "result";
             // 
             // accuracyRateLbl
             // 
             this.accuracyRateLbl.AutoSize = true;
-            this.accuracyRateLbl.Location = new System.Drawing.Point(15, 98);
+            this.accuracyRateLbl.Location = new System.Drawing.Point(15, 82);
             this.accuracyRateLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.accuracyRateLbl.Name = "accuracyRateLbl";
             this.accuracyRateLbl.Size = new System.Drawing.Size(158, 25);
@@ -71,16 +72,17 @@
             // accuracyRateOutLbl
             // 
             this.accuracyRateOutLbl.AutoSize = true;
-            this.accuracyRateOutLbl.Location = new System.Drawing.Point(260, 98);
+            this.accuracyRateOutLbl.Location = new System.Drawing.Point(323, 82);
             this.accuracyRateOutLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.accuracyRateOutLbl.Name = "accuracyRateOutLbl";
-            this.accuracyRateOutLbl.Size = new System.Drawing.Size(0, 25);
+            this.accuracyRateOutLbl.Size = new System.Drawing.Size(65, 25);
             this.accuracyRateOutLbl.TabIndex = 3;
+            this.accuracyRateOutLbl.Text = "result";
             // 
             // mseLbl
             // 
             this.mseLbl.AutoSize = true;
-            this.mseLbl.Location = new System.Drawing.Point(15, 147);
+            this.mseLbl.Location = new System.Drawing.Point(15, 121);
             this.mseLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mseLbl.Name = "mseLbl";
             this.mseLbl.Size = new System.Drawing.Size(212, 25);
@@ -90,15 +92,16 @@
             // mseOutLbl
             // 
             this.mseOutLbl.AutoSize = true;
-            this.mseOutLbl.Location = new System.Drawing.Point(260, 147);
+            this.mseOutLbl.Location = new System.Drawing.Point(323, 121);
             this.mseOutLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mseOutLbl.Name = "mseOutLbl";
-            this.mseOutLbl.Size = new System.Drawing.Size(0, 25);
+            this.mseOutLbl.Size = new System.Drawing.Size(65, 25);
             this.mseOutLbl.TabIndex = 5;
+            this.mseOutLbl.Text = "result";
             // 
             // imageClassifyButton
             // 
-            this.imageClassifyButton.Location = new System.Drawing.Point(20, 223);
+            this.imageClassifyButton.Location = new System.Drawing.Point(20, 181);
             this.imageClassifyButton.Margin = new System.Windows.Forms.Padding(6);
             this.imageClassifyButton.Name = "imageClassifyButton";
             this.imageClassifyButton.Size = new System.Drawing.Size(178, 44);
@@ -114,17 +117,18 @@
             // classifiedPattern
             // 
             this.classifiedPattern.AutoSize = true;
-            this.classifiedPattern.Location = new System.Drawing.Point(260, 233);
+            this.classifiedPattern.Location = new System.Drawing.Point(323, 191);
             this.classifiedPattern.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.classifiedPattern.Name = "classifiedPattern";
-            this.classifiedPattern.Size = new System.Drawing.Size(0, 25);
+            this.classifiedPattern.Size = new System.Drawing.Size(65, 25);
             this.classifiedPattern.TabIndex = 7;
+            this.classifiedPattern.Text = "result";
             // 
-            // Output
+            // OutputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 341);
+            this.ClientSize = new System.Drawing.Size(610, 277);
             this.Controls.Add(this.classifiedPattern);
             this.Controls.Add(this.imageClassifyButton);
             this.Controls.Add(this.mseOutLbl);
@@ -134,7 +138,7 @@
             this.Controls.Add(this.mismatchingSamplesOutLbl);
             this.Controls.Add(this.mismatchingSamplesLbl);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Output";
+            this.Name = "OutputForm";
             this.Text = "Output";
             this.ResumeLayout(false);
             this.PerformLayout();
