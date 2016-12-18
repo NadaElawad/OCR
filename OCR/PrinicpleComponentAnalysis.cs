@@ -61,14 +61,14 @@ namespace OCR
                 }
                 layers[1].neurons[j].value = transferFunction.evaluate(net);
             });
-            Parallel.For(0, layers[1].length, j =>
+            for (int j = 0; j < layers[1].length; j++)
             {
                 for (int i = 0; i < layers[0].length; i++)
                 {
                     double d_Weight = alpha * layers[1].neurons[j].value * (layers[0].neurons[i].value - getSum(j, i));
                     layers[1].neurons[j].weights[i] += d_Weight;
                 }
-            });
+            };
         }
         double getSum(int j, int i)
         {
