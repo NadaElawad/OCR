@@ -37,7 +37,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        //HelperFunctions.Normalize(ref input);
+                        HelperFunctions.Normalize(ref input);
                         PCA.ReduceData(input);
                     }
                 }
@@ -56,7 +56,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        //HelperFunctions.Normalize(ref input);
+                        HelperFunctions.Normalize(ref input);
 
                         double[] output = new double[num_Classes];
                         for (int k = 0; k < num_Classes; k++)
@@ -64,10 +64,32 @@ namespace OCR
                             if (k != i) output[k] = 0;
                             else output[k] = 1;
                         }
-                        meanSquareError += MLP.BackPropagate(PCA.ForwardPropagate(input), output);
+                        MLP.BackPropagate(PCA.ForwardPropagate(input), output);
                     }
                 }
-                meanSquareError /= num_TrainingPerClass * 2;
+                for (int i = 0; i < num_Classes; i++)
+                {
+                    for (int j = 1; j <= num_TrainingPerClass; j++)
+                    {
+                        String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
+                        string[] lines = System.IO.File.ReadAllLines(pattern);
+                        double[] input = HelperFunctions.ToDoubleArray(lines);
+                        HelperFunctions.Normalize(ref input);
+
+                        double[] output = MLP.ForwardPropagate(input);
+                        double[] desiredOutput = new double[num_Classes];
+                        double error = 0;
+                        for (int k = 0; k < num_Classes; k++)
+                        {
+                            if (k != i) desiredOutput[k] = 0;
+                            else desiredOutput[k] = 1;
+                            error = desiredOutput[k] - output[k];
+                            meanSquareError += error * error;
+                        }
+                    }
+                }
+                meanSquareError /= num_TrainingPerClass * num_Classes*2;
+                Console.WriteLine(meanSquareError);
             }
             return meanSquareError;
         }
@@ -84,7 +106,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        //HelperFunctions.Normalize(ref input);
+                        HelperFunctions.Normalize(ref input);
 
                         double[] output = new double[num_Classes];
                         for (int k = 0; k < num_Classes; k++)
@@ -92,10 +114,31 @@ namespace OCR
                             if (k != i) output[k] = 0;
                             else output[k] = 1;
                         }
-                        meanSquareError += MLP.BackPropagate(input, output);
+                        MLP.BackPropagate(input, output);
                     }
                 }
-                meanSquareError /= num_TrainingPerClass;
+                for (int i = 0; i < num_Classes; i++)
+                {
+                    for (int j = 1; j <= num_TrainingPerClass; j++)
+                    {
+                        String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
+                        string[] lines = System.IO.File.ReadAllLines(pattern);
+                        double[] input = HelperFunctions.ToDoubleArray(lines);
+                        HelperFunctions.Normalize(ref input);
+
+                        double[] output = MLP.ForwardPropagate(input);
+                        double[] desiredOutput = new double[num_Classes];
+                        double error = 0;
+                        for (int k = 0; k < num_Classes; k++)
+                        {
+                            if (k != i) desiredOutput[k] = 0;
+                            else desiredOutput[k] = 1;
+                            error = desiredOutput[k] - output[k];
+                            meanSquareError += error * error;
+                        }
+                    }
+                }
+                meanSquareError /= num_TrainingPerClass*num_Classes*2;
             }
             return meanSquareError;
         }
@@ -115,7 +158,7 @@ namespace OCR
         {
             string[] lines = System.IO.File.ReadAllLines(imgPath);
             double[] input = HelperFunctions.ToDoubleArray(lines);
-            //HelperFunctions.Normalize(ref input);
+            HelperFunctions.Normalize(ref input);
 
             double[] output = MLP.ForwardPropagate(PCA.ForwardPropagate(input));
             int classified = 0;
