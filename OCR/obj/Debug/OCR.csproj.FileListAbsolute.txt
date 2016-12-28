@@ -17,3 +17,4 @@ C:\Users\Omar\Desktop\OCR\OCR\bin\Debug\OCR.pdb
 C:\Users\Omar\Desktop\OCR\OCR\obj\Debug\OCR.Output.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.inputForm.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.OutputForm.resources
+C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.csprojResolveAssemblyReference.cache

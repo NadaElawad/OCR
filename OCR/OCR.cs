@@ -76,7 +76,7 @@ namespace OCR
                         double[] input = HelperFunctions.ToDoubleArray(lines);
                         HelperFunctions.Normalize(ref input);
 
-                        double[] output = MLP.ForwardPropagate(input);
+                        double[] output = MLP.ForwardPropagate(PCA.ForwardPropagate(input));
                         double[] desiredOutput = new double[num_Classes];
                         double error = 0;
                         for (int k = 0; k < num_Classes; k++)
@@ -88,7 +88,7 @@ namespace OCR
                         }
                     }
                 }
-                meanSquareError /= num_TrainingPerClass * num_Classes*2;
+                meanSquareError /= num_TrainingPerClass * num_Classes * 2;
                 Console.WriteLine(meanSquareError);
             }
             return meanSquareError;
@@ -138,7 +138,7 @@ namespace OCR
                         }
                     }
                 }
-                meanSquareError /= num_TrainingPerClass*num_Classes*2;
+                meanSquareError /= num_TrainingPerClass * num_Classes * 2;
             }
             return meanSquareError;
         }
