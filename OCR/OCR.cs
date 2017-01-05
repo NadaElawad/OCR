@@ -106,7 +106,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        HelperFunctions.Normalize(ref input);
+                        //HelperFunctions.Normalize(ref input);
 
                         double[] output = new double[num_Classes];
                         for (int k = 0; k < num_Classes; k++)
@@ -124,7 +124,7 @@ namespace OCR
                         String pattern = "img/" + classes[i] + "/Training/" + j + ".txt";
                         string[] lines = System.IO.File.ReadAllLines(pattern);
                         double[] input = HelperFunctions.ToDoubleArray(lines);
-                        HelperFunctions.Normalize(ref input);
+                        //HelperFunctions.Normalize(ref input);
 
                         double[] output = MLP.ForwardPropagate(input);
                         double[] desiredOutput = new double[num_Classes];
@@ -158,7 +158,7 @@ namespace OCR
         {
             string[] lines = System.IO.File.ReadAllLines(imgPath);
             double[] input = HelperFunctions.ToDoubleArray(lines);
-            HelperFunctions.Normalize(ref input);
+            //HelperFunctions.Normalize(ref input);
 
             double[] output = MLP.ForwardPropagate(PCA.ForwardPropagate(input));
             int classified = 0;

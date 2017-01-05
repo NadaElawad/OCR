@@ -18,3 +18,13 @@ C:\Users\Omar\Desktop\OCR\OCR\obj\Debug\OCR.Output.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.inputForm.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.OutputForm.resources
 C:\Users\nadaa\Desktop\Projects\OCR\OCR\obj\Debug\OCR.csprojResolveAssemblyReference.cache
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\bin\Debug\OCR.exe.config
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.exe
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.pdb
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\bin\Debug\OCR.exe
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\bin\Debug\OCR.pdb
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.csprojResolveAssemblyReference.cache
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.InputForm.resources
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.OutputForm.resources
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.Properties.Resources.resources
+E:\Work\4th Year - 1st Semestre\Neural Networks\OCR\OCR\obj\Debug\OCR.csproj.GenerateResource.Cache

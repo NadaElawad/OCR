@@ -28,8 +28,8 @@ namespace OCR
         private void initializeValues()
         {
             neuronsPerLayerGridView.Rows[0].SetValues(30);
-            numEpochsTxtBox.Text = "50";
-            numPCTxtBox.Text = "50";
+            numEpochsTxtBox.Text = "30";
+            numPCTxtBox.Text = "65";
             activationFunctionCmbx.SelectedIndex = 1;
             numPCTxtBox.Enabled = numEpochsTxtBox.Enabled = pcaAlphaTxtBox.Enabled = false;
             valALbl.Hide();

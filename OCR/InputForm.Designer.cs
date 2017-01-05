@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.hiddenLayerLbl = new System.Windows.Forms.Label();
             this.hiddenLayerTxt = new System.Windows.Forms.TextBox();
             this.neuronsPerLayerLbl = new System.Windows.Forms.Label();
@@ -62,29 +62,26 @@
             // hiddenLayerLbl
             // 
             this.hiddenLayerLbl.AutoSize = true;
-            this.hiddenLayerLbl.Location = new System.Drawing.Point(29, 63);
-            this.hiddenLayerLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.hiddenLayerLbl.Location = new System.Drawing.Point(14, 33);
             this.hiddenLayerLbl.Name = "hiddenLayerLbl";
-            this.hiddenLayerLbl.Size = new System.Drawing.Size(157, 25);
+            this.hiddenLayerLbl.Size = new System.Drawing.Size(78, 13);
             this.hiddenLayerLbl.TabIndex = 0;
             this.hiddenLayerLbl.Text = "Hidden Layers:";
             // 
             // hiddenLayerTxt
             // 
-            this.hiddenLayerTxt.Location = new System.Drawing.Point(321, 60);
-            this.hiddenLayerTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.hiddenLayerTxt.Location = new System.Drawing.Point(160, 31);
             this.hiddenLayerTxt.Name = "hiddenLayerTxt";
-            this.hiddenLayerTxt.Size = new System.Drawing.Size(134, 31);
+            this.hiddenLayerTxt.Size = new System.Drawing.Size(69, 20);
             this.hiddenLayerTxt.TabIndex = 1;
             this.hiddenLayerTxt.Text = "1";
             // 
             // neuronsPerLayerLbl
             // 
             this.neuronsPerLayerLbl.AutoSize = true;
-            this.neuronsPerLayerLbl.Location = new System.Drawing.Point(29, 108);
-            this.neuronsPerLayerLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.neuronsPerLayerLbl.Location = new System.Drawing.Point(14, 56);
             this.neuronsPerLayerLbl.Name = "neuronsPerLayerLbl";
-            this.neuronsPerLayerLbl.Size = new System.Drawing.Size(234, 25);
+            this.neuronsPerLayerLbl.Size = new System.Drawing.Size(119, 13);
             this.neuronsPerLayerLbl.TabIndex = 2;
             this.neuronsPerLayerLbl.Text = "No. of Neurons / Layer:";
             // 
@@ -94,76 +91,68 @@
             this.activationFunctionCmbx.Items.AddRange(new object[] {
             "Sigmoid",
             "Tanh"});
-            this.activationFunctionCmbx.Location = new System.Drawing.Point(228, 58);
-            this.activationFunctionCmbx.Margin = new System.Windows.Forms.Padding(6);
+            this.activationFunctionCmbx.Location = new System.Drawing.Point(114, 30);
             this.activationFunctionCmbx.Name = "activationFunctionCmbx";
-            this.activationFunctionCmbx.Size = new System.Drawing.Size(154, 33);
+            this.activationFunctionCmbx.Size = new System.Drawing.Size(79, 21);
             this.activationFunctionCmbx.TabIndex = 14;
             this.activationFunctionCmbx.SelectedIndexChanged += new System.EventHandler(this.activationFunctionCmbx_SelectedIndexChanged);
             // 
             // valALbl
             // 
             this.valALbl.AutoSize = true;
-            this.valALbl.Location = new System.Drawing.Point(15, 122);
-            this.valALbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.valALbl.Location = new System.Drawing.Point(8, 63);
             this.valALbl.Name = "valALbl";
-            this.valALbl.Size = new System.Drawing.Size(73, 25);
+            this.valALbl.Size = new System.Drawing.Size(37, 13);
             this.valALbl.TabIndex = 7;
             this.valALbl.Text = "Slope:";
             // 
             // valATxt
             // 
-            this.valATxt.Location = new System.Drawing.Point(228, 116);
-            this.valATxt.Margin = new System.Windows.Forms.Padding(6);
+            this.valATxt.Location = new System.Drawing.Point(114, 60);
             this.valATxt.Name = "valATxt";
-            this.valATxt.Size = new System.Drawing.Size(134, 31);
+            this.valATxt.Size = new System.Drawing.Size(69, 20);
             this.valATxt.TabIndex = 8;
             this.valATxt.Text = "1";
             // 
             // learningRateLbl
             // 
             this.learningRateLbl.AutoSize = true;
-            this.learningRateLbl.Location = new System.Drawing.Point(15, 165);
-            this.learningRateLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.learningRateLbl.Location = new System.Drawing.Point(8, 86);
             this.learningRateLbl.Name = "learningRateLbl";
-            this.learningRateLbl.Size = new System.Drawing.Size(153, 25);
+            this.learningRateLbl.Size = new System.Drawing.Size(77, 13);
             this.learningRateLbl.TabIndex = 9;
             this.learningRateLbl.Text = "Learning Rate:";
             // 
             // learningRateTxt
             // 
-            this.learningRateTxt.Location = new System.Drawing.Point(228, 159);
-            this.learningRateTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.learningRateTxt.Location = new System.Drawing.Point(114, 83);
             this.learningRateTxt.Name = "learningRateTxt";
-            this.learningRateTxt.Size = new System.Drawing.Size(134, 31);
+            this.learningRateTxt.Size = new System.Drawing.Size(69, 20);
             this.learningRateTxt.TabIndex = 10;
-            this.learningRateTxt.Text = "0.1";
+            this.learningRateTxt.Text = "0.6";
             // 
             // errorRateLbl
             // 
             this.errorRateLbl.AutoSize = true;
-            this.errorRateLbl.Location = new System.Drawing.Point(15, 208);
-            this.errorRateLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorRateLbl.Location = new System.Drawing.Point(8, 108);
             this.errorRateLbl.Name = "errorRateLbl";
-            this.errorRateLbl.Size = new System.Drawing.Size(167, 25);
+            this.errorRateLbl.Size = new System.Drawing.Size(82, 13);
             this.errorRateLbl.TabIndex = 11;
             this.errorRateLbl.Text = "Error Threshold:";
             // 
             // errorThresholdTxt
             // 
-            this.errorThresholdTxt.Location = new System.Drawing.Point(228, 202);
-            this.errorThresholdTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.errorThresholdTxt.Location = new System.Drawing.Point(114, 105);
             this.errorThresholdTxt.Name = "errorThresholdTxt";
-            this.errorThresholdTxt.Size = new System.Drawing.Size(134, 31);
+            this.errorThresholdTxt.Size = new System.Drawing.Size(69, 20);
             this.errorThresholdTxt.TabIndex = 12;
-            this.errorThresholdTxt.Text = "0.05";
+            this.errorThresholdTxt.Text = "0.4";
             // 
             // trainButton
             // 
-            this.trainButton.Location = new System.Drawing.Point(1304, 401);
-            this.trainButton.Margin = new System.Windows.Forms.Padding(6);
+            this.trainButton.Location = new System.Drawing.Point(652, 209);
             this.trainButton.Name = "trainButton";
-            this.trainButton.Size = new System.Drawing.Size(196, 80);
+            this.trainButton.Size = new System.Drawing.Size(98, 42);
             this.trainButton.TabIndex = 13;
             this.trainButton.Text = "Train";
             this.trainButton.UseVisualStyleBackColor = true;
@@ -177,20 +166,21 @@
             this.neuronsPerLayerGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.neuronsPerLayer});
             this.neuronsPerLayerGridView.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.neuronsPerLayerGridView.Location = new System.Drawing.Point(321, 102);
+            this.neuronsPerLayerGridView.Location = new System.Drawing.Point(160, 53);
+            this.neuronsPerLayerGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.neuronsPerLayerGridView.Name = "neuronsPerLayerGridView";
             this.neuronsPerLayerGridView.RowTemplate.Height = 33;
-            this.neuronsPerLayerGridView.Size = new System.Drawing.Size(256, 234);
+            this.neuronsPerLayerGridView.Size = new System.Drawing.Size(128, 122);
             this.neuronsPerLayerGridView.TabIndex = 15;
             // 
             // neuronsPerLayer
             // 
             this.neuronsPerLayer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.neuronsPerLayer.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.neuronsPerLayer.DefaultCellStyle = dataGridViewCellStyle1;
             this.neuronsPerLayer.HeaderText = "#Neurons/Layer";
             this.neuronsPerLayer.Name = "neuronsPerLayer";
-            this.neuronsPerLayer.Width = 210;
+            this.neuronsPerLayer.Width = 110;
             // 
             // layersInformationGroupBox
             // 
@@ -198,9 +188,11 @@
             this.layersInformationGroupBox.Controls.Add(this.neuronsPerLayerLbl);
             this.layersInformationGroupBox.Controls.Add(this.hiddenLayerTxt);
             this.layersInformationGroupBox.Controls.Add(this.hiddenLayerLbl);
-            this.layersInformationGroupBox.Location = new System.Drawing.Point(21, 40);
+            this.layersInformationGroupBox.Location = new System.Drawing.Point(10, 21);
+            this.layersInformationGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.layersInformationGroupBox.Name = "layersInformationGroupBox";
-            this.layersInformationGroupBox.Size = new System.Drawing.Size(592, 352);
+            this.layersInformationGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.layersInformationGroupBox.Size = new System.Drawing.Size(296, 183);
             this.layersInformationGroupBox.TabIndex = 16;
             this.layersInformationGroupBox.TabStop = false;
             this.layersInformationGroupBox.Text = "Layer\'s Information";
@@ -208,10 +200,9 @@
             // activationFunctionLbl
             // 
             this.activationFunctionLbl.AutoSize = true;
-            this.activationFunctionLbl.Location = new System.Drawing.Point(15, 59);
-            this.activationFunctionLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.activationFunctionLbl.Location = new System.Drawing.Point(8, 31);
             this.activationFunctionLbl.Name = "activationFunctionLbl";
-            this.activationFunctionLbl.Size = new System.Drawing.Size(201, 25);
+            this.activationFunctionLbl.Size = new System.Drawing.Size(101, 13);
             this.activationFunctionLbl.TabIndex = 5;
             this.activationFunctionLbl.Text = "Activation Function:";
             // 
@@ -224,74 +215,75 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pcaCheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(1027, 40);
+            this.groupBox1.Location = new System.Drawing.Point(514, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 352);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(236, 183);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PCA Data Reduction";
             // 
             // pcaAlphaTxtBox
             // 
-            this.pcaAlphaTxtBox.Location = new System.Drawing.Point(316, 198);
-            this.pcaAlphaTxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.pcaAlphaTxtBox.Location = new System.Drawing.Point(158, 103);
             this.pcaAlphaTxtBox.Name = "pcaAlphaTxtBox";
-            this.pcaAlphaTxtBox.Size = new System.Drawing.Size(134, 31);
+            this.pcaAlphaTxtBox.Size = new System.Drawing.Size(69, 20);
             this.pcaAlphaTxtBox.TabIndex = 16;
             this.pcaAlphaTxtBox.Text = "0.01";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(8, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 25);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Learning Rate:";
             // 
             // numPCTxtBox
             // 
-            this.numPCTxtBox.Location = new System.Drawing.Point(316, 155);
-            this.numPCTxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.numPCTxtBox.Location = new System.Drawing.Point(158, 81);
             this.numPCTxtBox.Name = "numPCTxtBox";
-            this.numPCTxtBox.Size = new System.Drawing.Size(134, 31);
+            this.numPCTxtBox.Size = new System.Drawing.Size(69, 20);
             this.numPCTxtBox.TabIndex = 16;
             this.numPCTxtBox.Text = "1";
             // 
             // numEpochsTxtBox
             // 
-            this.numEpochsTxtBox.Location = new System.Drawing.Point(316, 112);
-            this.numEpochsTxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.numEpochsTxtBox.Location = new System.Drawing.Point(158, 58);
             this.numEpochsTxtBox.Name = "numEpochsTxtBox";
-            this.numEpochsTxtBox.Size = new System.Drawing.Size(134, 31);
+            this.numEpochsTxtBox.Size = new System.Drawing.Size(69, 20);
             this.numEpochsTxtBox.TabIndex = 15;
             this.numEpochsTxtBox.Text = "1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 158);
+            this.label2.Location = new System.Drawing.Point(8, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 25);
+            this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "No. of Principal Components:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 115);
+            this.label1.Location = new System.Drawing.Point(8, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 25);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "No. of Epochs:";
             // 
             // pcaCheckBox
             // 
             this.pcaCheckBox.AutoSize = true;
-            this.pcaCheckBox.Location = new System.Drawing.Point(20, 60);
+            this.pcaCheckBox.Location = new System.Drawing.Point(10, 31);
+            this.pcaCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcaCheckBox.Name = "pcaCheckBox";
-            this.pcaCheckBox.Size = new System.Drawing.Size(147, 29);
+            this.pcaCheckBox.Size = new System.Drawing.Size(76, 17);
             this.pcaCheckBox.TabIndex = 0;
             this.pcaCheckBox.Text = "Apply PCA";
             this.pcaCheckBox.UseVisualStyleBackColor = true;
@@ -307,24 +299,25 @@
             this.groupBox2.Controls.Add(this.valALbl);
             this.groupBox2.Controls.Add(this.activationFunctionCmbx);
             this.groupBox2.Controls.Add(this.activationFunctionLbl);
-            this.groupBox2.Location = new System.Drawing.Point(619, 40);
+            this.groupBox2.Location = new System.Drawing.Point(310, 21);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(402, 352);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(201, 183);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Learning Parameters";
             // 
             // InputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1536, 510);
+            this.ClientSize = new System.Drawing.Size(681, 265);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.layersInformationGroupBox);
             this.Controls.Add(this.trainButton);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "InputForm";
             this.Text = "Input Form";
             ((System.ComponentModel.ISupportInitialize)(this.neuronsPerLayerGridView)).EndInit();

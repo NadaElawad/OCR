@@ -21,6 +21,7 @@ namespace OCR
         }
         void update()
         {
+            classifiedPattern.Hide();
             mismatchingSamplesOutLbl.Text = inForm.misMatchingSamples.ToString();
             accuracyRateOutLbl.Text = (Math.Round(inForm.accuracy*100)+"%").ToString();
             mseOutLbl.Text = inForm.meanSquareError.ToString();
@@ -32,9 +33,19 @@ namespace OCR
             if (result == DialogResult.OK)
             {
                 string filePath = openFileDialog1.FileName;
-                string s = "Image Belongs to Class: " + inForm.ClassifyImage(filePath);
-                classifiedPattern.Text = s;
+                int filePathSize = filePath.Count();
+                try
+                {
+                    string s = "Image Belongs to Class: " + inForm.ClassifyImage(filePath);
+                    classifiedPattern.Show();
+                    classifiedPattern.Text = s;
+                }
+                catch (Exception inputFileError)
+                {
+                    MessageBox.Show(inputFileError.Message);
+                }
             }
+
         }
     }
 }
